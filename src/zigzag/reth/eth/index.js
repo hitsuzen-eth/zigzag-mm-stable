@@ -34,11 +34,11 @@ const RANGE_FOCUS = new BigNumber(typeof process.env.RANGE_FOCUS !== 'undefined'
 // How much slice will be used to indicate liquidity to ZigZag
 const SLICE = new BigNumber(typeof process.env.SLICE !== 'undefined' ? process.env.SLICE : 100)
 // Id Asset A (number)
-const RETH_ID = parseInt(typeof process.env.RETH_ID) !== 'undefined' ? process.env.RETH_ID : 132
+const RETH_ID = typeof process.env.RETH_ID !== 'undefined' ? parseInt(process.env.RETH_ID) : 132
 // Id Asset B (number)
-const ETH_ID = parseInt(typeof process.env.ETH_ID) !== 'undefined' ? process.env.ETH_ID : 0
+const ETH_ID = typeof process.env.ETH_ID !== 'undefined' ? parseInt(process.env.ETH_ID) : 0
 // Log level
-const LOG_LEVEL = typeof process.env.LOG_LEVEL !== 'undefined' ? process.env.LOG_LEVEL : 0
+const LOG_LEVEL = typeof process.env.LOG_LEVEL !== 'undefined' ? parseInt(process.env.LOG_LEVEL) : 0
 log.setLevel(LOG_LEVEL)
 
 const pow18 = new BigNumber(10).pow(18)
