@@ -1,0 +1,23 @@
+{
+  "name": "zigzag-mm-stable",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "author": "hitsuzen.eth",
+  "type": "module",
+  "scripts": {
+    "zigzag-reth-eth": "node src/zigzag/reth/eth/index.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bignumber.js": "^9.0.2",
+    "ethers": "^5.5.4",
+    "heartbeats": "^5.0.1",
+    "loglevel": "^1.8.0",
+    "mocha": "^9.2.0",
+    "ws": "^8.5.0",
+    "zksync": "^0.11.6"
+  }
+}
