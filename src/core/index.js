@@ -113,7 +113,6 @@ export const checkIfTradeIsOk = (isBuy,
             .plus(1)
             .times(fairPrice)
         const priceTrade = tradeAssetB.minus(fee).div(tradeAssetA)
-        console.log({priceTrade: priceTrade.toString(), price: price.toString()})
         return price.isLessThanOrEqualTo(priceTrade)
     }
 

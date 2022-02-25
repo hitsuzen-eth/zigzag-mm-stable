@@ -8,4 +8,4 @@ COPY ./ ./
 RUN npm install
 
 # Default Command to launch the Application
-CMD ["npm", "run", "zigzag-reth-eth"]
+CMD ["node", "src/zigzag/reth/eth/index.js"]

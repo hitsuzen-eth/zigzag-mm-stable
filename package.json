@@ -7,7 +7,7 @@
   "author": "hitsuzen.eth",
   "type": "module",
   "scripts": {
-    "zigzag-reth-eth": "node src/zigzag/reth/eth/index.js",
+    "start": "node src/zigzag/reth/eth/index.js",
     "test": "mocha"
   },
   "dependencies": {
