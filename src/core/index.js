@@ -100,6 +100,7 @@ export const checkIfTradeIsOk = (isBuy,
                                  tradeAssetB,
                                  fee) => {
     if (isBuy) {
+        if (assetB.isLessThan(tradeAssetB)) return false
         const spread = spreadBpByImbalance(
             false, // When someone want to buy we need to sell
             minSpreadBp,
@@ -115,6 +116,7 @@ export const checkIfTradeIsOk = (isBuy,
         const priceTrade = tradeAssetB.minus(fee).div(tradeAssetA)
         return price.isLessThanOrEqualTo(priceTrade)
     }
+    if (assetA.isLessThan(tradeAssetA)) return false
 
     const spread = spreadBpByImbalance(
         true, // When someone want to sell we need to buy

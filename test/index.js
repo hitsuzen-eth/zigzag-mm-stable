@@ -452,5 +452,34 @@ describe('Core', () => {
                 new BigNumber(10 * 1.0681),
                 new BigNumber(1)))
         })
+        it('Someone want to buy more than we have should return false', () => {
+            // Someone want to Buy = B => A so WE sell A and get B
+            assert.ok(!checkIfTradeIsOk(
+                true,
+                new BigNumber(100),
+                new BigNumber(1000),
+                new BigNumber(3),
+                new BigNumber(0.5),
+                new BigNumber(2),
+                new BigNumber(1),
+                new BigNumber(2),
+                new BigNumber(10),
+                new BigNumber(20*1.0107),
+                new BigNumber(0)))
+
+                // Someone want to Sell = A => B so WE sell B and get A
+                assert.ok(!checkIfTradeIsOk(
+                    false,
+                    new BigNumber(100),
+                    new BigNumber(1000),
+                    new BigNumber(3),
+                    new BigNumber(0.5),
+                    new BigNumber(2),
+                    new BigNumber(1),
+                    new BigNumber(2),
+                    new BigNumber(10),
+                    new BigNumber(20*1.0106),
+                    new BigNumber(0)))
+        })
     })
 })
